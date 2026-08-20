@@ -19,21 +19,23 @@ android {
     buildFeatures {
         compose = true
     }
+
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.8"
     }
+
     kotlinOptions {
         jvmTarget = "17"
     }
 }
 
 dependencies {
-    // Room Database (Using KSP instead of KAPT)
+    // Room
     implementation("androidx.room:room-runtime:2.6.1")
     implementation("androidx.room:room-ktx:2.6.1")
     ksp("androidx.room:room-compiler:2.6.1")
 
-    // Image Loading (Coil)
+    // Coil
     implementation("io.coil-kt:coil-compose:2.6.0")
 
     // Jetpack Compose
