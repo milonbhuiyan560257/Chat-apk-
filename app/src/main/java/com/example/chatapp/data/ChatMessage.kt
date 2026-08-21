@@ -5,8 +5,12 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "chat_messages")
 data class ChatMessage(
-    @PrimaryKey(autoGenerate = true) 
+    @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
-    val messageText: String,
+
+    val messageText: String = "",
+
+    val imageUri: String? = null,
+
     val timestamp: Long = System.currentTimeMillis()
 )
